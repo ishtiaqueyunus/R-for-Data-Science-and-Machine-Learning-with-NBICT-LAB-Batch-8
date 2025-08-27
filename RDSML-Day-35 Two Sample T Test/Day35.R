@@ -5,3 +5,9 @@ dataset<-read.csv("scores.csv")
 # Checking for the normal distribution
 shapiro.test(dataset$Male)
 shapiro.test(dataset$Female)
+
+# Checking for the homogenity of variances
+var.test(x = dataset$Male, y = dataset$Female)
+
+# Running the independent sample t test
+t.test(x = dataset$Male, y = dataset$Female, var.equal = TRUE)
