@@ -29,3 +29,20 @@ sd(myDataset$carb_protein)
 # install.packages("effsize")
 library(effsize)
 cohen.d(myDataset$carb_protein, myDataset$carb, paired = TRUE)
+
+# Result interpretation and reporting
+# A paired-samples t-test was used to determine whether there was a
+# statistically significant mean difference between the distance ran
+# when participants imbibed a carbohydrate-protein drink compared to
+# a carbohydrate-only drink. No outliers were detected. The assumption
+# of normality was not violated, as assessed by Shapiro-Wilk's test
+# (p = 0.780). Participants ran further when imbibing the carbohydrate-
+# protein drink (Mean = 11.302 KM, SD = 0.713 KM) as opposed to the
+# carbohydrate only drink (Mean = 11.167 KM, SD = 0.726 KM), a
+# statistically significant mean increase of 0.136 KM,
+# 95% CI [0.091, 0.181]
+
+
+
+
+
