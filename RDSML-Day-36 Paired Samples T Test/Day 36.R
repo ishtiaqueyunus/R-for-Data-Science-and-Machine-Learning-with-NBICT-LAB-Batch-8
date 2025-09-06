@@ -40,7 +40,7 @@ cohen.d(myDataset$carb_protein, myDataset$carb, paired = TRUE)
 # protein drink (Mean = 11.302 KM, SD = 0.713 KM) as opposed to the
 # carbohydrate only drink (Mean = 11.167 KM, SD = 0.726 KM), a
 # statistically significant mean increase of 0.136 KM,
-# 95% CI [0.091, 0.181]
+# 95% CI [0.091, 0.181], t(19) = 6.352, p < .001, Cohen's d estimate: 0.187.
 
 
 
