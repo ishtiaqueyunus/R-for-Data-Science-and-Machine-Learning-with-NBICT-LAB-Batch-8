@@ -59,3 +59,4 @@ aov_res
 # Running the Shapiro-Wilk test
 shapiro.test(aov_res)
 
+kruskal.test(weight ~ group, data = PlantGrowth)
