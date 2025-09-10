@@ -52,7 +52,10 @@ pairwise.t.test(PlantGrowth$weight, PlantGrowth$group,
 # Checking for normal distribution
 plot(anova, 2)
 
+# Extracting the residuals
+aov_res <- residuals(object = anova)
+aov_res
 
-
-
+# Running the Shapiro-Wilk test
+shapiro.test(aov_res)
 
