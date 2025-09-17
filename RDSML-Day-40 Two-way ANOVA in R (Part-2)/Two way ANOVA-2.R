@@ -24,3 +24,9 @@ ggplot(summs, aes(irr, mean, group = fert)) +
 # Fit the model
 m <- aov(y ~ fert + irr + fert * irr, data = d)
 summary(m)
+
+# Assumptions Visual checks
+par(mfrow = c(2,2))
+plot(m)
+par(mfrow = c(1,1))
+
