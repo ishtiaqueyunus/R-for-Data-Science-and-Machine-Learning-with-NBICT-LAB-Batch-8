@@ -30,3 +30,18 @@ par(mfrow = c(2,2))
 plot(m)
 par(mfrow = c(1,1))
 
+# Shapiro-Wilk on residuals (normality)
+res <- residuals(m)
+shapiro.test(res)
+
+# Levene's test for equal variances 
+car::leveneTest(y ~ fert*irr, data = d, center = median)
+
+# Interaction contrasts (simple effects): 
+# effect of fert at each level of irr
+library(emmeans)
+contrast(emmeans(m, ~ fert | irr), method = "pairwise", adjust = "tukey")
+
+# effect of irr at each level of fert
+library(emmeans)
+contrast(emmeans(m, ~ irr | fert), method = "pairwise", adjust = "tukey")
